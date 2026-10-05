@@ -207,9 +207,12 @@ public final class MacroScreen extends Screen {
     }
 
     private void drawLabels(DrawContext context) {
-        int labelY = panelY + panelH - 41;
-        context.drawText(textRenderer, "Повторы", panelX + SIDE, labelY - 9, 0xFFA4AFBA, false);
-        context.drawText(textRenderer, "Разрыв, мс", panelX + SIDE + 198, labelY - 9, 0xFFA4AFBA, false);
+        int fieldY = panelY + panelH - 46;
+
+        // Labels sit clearly above their input fields and use the actual field
+        // positions so future layout changes cannot desynchronize the text.
+        context.drawText(textRenderer, "Повторы", repetitionsField.getX(), fieldY - 10, 0xFFA4AFBA, false);
+        context.drawText(textRenderer, "Разрыв, мс", delayField.getX(), fieldY - 10, 0xFFA4AFBA, false);
 
         context.drawText(textRenderer, "Макрос", panelX + SIDE, panelY + 13, 0xFFE9EEF3, false);
         context.drawText(textRenderer, "ПКМ здесь не нужен: открой / закрой окно клавишей Right Ctrl", panelX + SIDE, panelY + 23, 0xFF66737F, false);
