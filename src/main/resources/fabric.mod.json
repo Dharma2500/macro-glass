@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "macro_glass",
+  "version": "${version}",
+  "name": "Macro Glass",
+  "description": "Client-side macro editor with seven tabs and repeat controls for Minecraft 1.21.11.",
+  "authors": ["Vitaly"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/macro_glass/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.vitalymacro.macroglass.client.MacroGlassClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
